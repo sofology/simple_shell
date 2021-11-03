@@ -292,23 +292,23 @@ int *repl_file(int *handle, char force_set);
 uint cmd_no(uint val, char set);
 void put_prompt(void);
 
-int cd(Invokable params);
-int env(Invokable params);
-int setenv(Invokable params);
-int unsetenv(Invokable params);
+int b_cd(Invokable params);
+int b_env(Invokable params);
+int b_setenv(Invokable params);
+int b_unsetenv(Invokable params);
 
-int alias(Invokable params);
+int b_alias(Invokable params);
 Node *alias_ls(char *name);
 
-int history(Invokable params);
+int b_history(Invokable params);
 char **load_history();
 char **save_history();
 char **hist_pstack(char *ln, char is_old, char get_old);
 void free_history(void);
 
-int help(Invokable params);
+int b_help(Invokable params);
 
-int exit(Invokable params);
+int b_exit(Invokable params);
 int parse_exit_status(char *str, char *success);
 
 void sigint_handler(int sig);
