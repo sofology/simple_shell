@@ -110,12 +110,12 @@ void assign_aliases(Hashtable **raliases_htbl, char **rarg,
 }
 
 /**
- * builtin__alias - handles the `alias` command
+ * alias - handles the `alias` command
  * @params: command arguments
  *
  * Return: command exit status
  */
-int builtin__alias(Invokable params)
+int alias(Invokable params)
 {
 	Hashtable *aliases_htbl = glob_g(VAR_ALIASES);
 	int status = 0, args_i = 0, args_queue_i = 0, exps_queue_i = 0,
